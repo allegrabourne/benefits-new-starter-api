@@ -51,5 +51,8 @@ namespace Benefits.Starter.Service.Employees
 
             throw new InvalidOperationException("Unable to generate a unique employee number.");
         }
+
+        public Task<Employee?> GetByEmployeeNoAsync(string employeeNo, CancellationToken cancellationToken)
+            => _repo.GetEmployeeByNumberAsync(employeeNo, cancellationToken);
     }
 }

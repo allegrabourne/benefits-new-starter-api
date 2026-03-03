@@ -12,5 +12,7 @@ namespace Benefits.Starter.Service.Employees
         Task<bool> EmailExistsAsync(string email, CancellationToken cancellationToken);
 
         Task<bool> EmployeeNoExistsAsync(string employeeNo, CancellationToken cancellationToken);
+
+        Task<Employee?> GetEmployeeByNumberAsync(string employeeNo, CancellationToken cancellationToken);
     }
 }
