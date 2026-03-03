@@ -34,5 +34,14 @@ namespace Benefits.Starter.Repository
             var trimmed = employeeNo.Trim();
             return _dbContext.Employees.AnyAsync(e => e.EmployeeNo == trimmed, cancellationToken);
         }
+
+        public Task<Employee?> GetEmployeeByNumberAsync(string employeeNo, CancellationToken cancellationToken)
+        {
+            var trimmed = employeeNo.Trim();
+
+            return _dbContext.Employees
+                .AsNoTracking()
+                .FirstOrDefaultAsync(e => e.EmployeeNo == trimmed, cancellationToken);
+        }
     }
 }

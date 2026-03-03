@@ -12,6 +12,7 @@ namespace Benefits.Starter.Test.Fakes
         public bool EmployeeNoExists { get; set; }
         public Employee? AddedEmployee { get; private set; }
         public int AddCallCount { get; private set; }
+        public Employee? EmployeeToReturn { get; set; }
 
         public Task AddAsync(Employee employee, CancellationToken cancellationToken)
         {
@@ -25,5 +26,8 @@ namespace Benefits.Starter.Test.Fakes
 
         public Task<bool> EmployeeNoExistsAsync(string employeeNo, CancellationToken cancellationToken)
             => Task.FromResult(EmployeeNoExists);
+
+        public Task<Employee?> GetEmployeeByNumberAsync(string employeeNo, CancellationToken cancellationToken)
+            => Task.FromResult(EmployeeToReturn);
     }
 }
