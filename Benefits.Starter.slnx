@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".gitignore" />
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="Benefits.Starter.Api/Benefits.Starter.Api.csproj" />
+  <Project Path="Benefits.Starter.Domain/Benefits.Starter.Domain.csproj" />
+  <Project Path="Benefits.Starter.Repository/Benefits.Starter.Repository.csproj" Id="f52857a2-21dd-4a5d-95b1-4e0c39c1615e" />
+  <Project Path="Benefits.Starter.Service/Benefits.Starter.Service.csproj" Id="d53f3267-1fc9-48fe-a88b-e69ffb82fe12" />
+  <Project Path="Benefits.Starter.Test/Benefits.Starter.Test.csproj" Id="b9d14c2f-f5fd-4589-bc2e-4a1d45bcebb2" />
+</Solution>
