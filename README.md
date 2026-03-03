@@ -73,3 +73,54 @@ Although this implementation focuses on a single use case (creating a new employ
 
 - Event publication for downstream systems
 
+## How to run
+
+Prerequisites
+
+.NET SDK 10 (or compatible preview)
+
+SQL Server LocalDB (default Windows install)
+or update the connection string to your SQL instance.
+
+Apply Database Migrations
+
+From the solution root:
+
+dotnet ef database update \
+--project Benefits.Starter.Repository \
+--startup-project Benefits.Starter.Api
+
+Run the API
+dotnet run --project Benefits.Starter.Api
+
+
+## API Endpoints
+
+GET /health
+https://localhost:7070/health
+
+Add New Starter
+POST /employees
+https://localhost:7070/employees
+
+{
+  "title": 2,
+  "firstName": "Allegra",
+  "surname": "Bourne",
+  "dateOfBirth": "1984-01-01",
+  "gender": 1,
+  "email": "allegra@example.com",
+  "address": {
+    "line1": "1 High Street",
+    "line2": null,
+    "city": "York",
+    "postcode": "YO1 1AA",
+    "country": "UK"
+  }
+}
+
+Retrieve Starter by Employee Number
+GET /employees/{employeeNo}
+https://localhost:7070/employees/EMP443825
+
+
